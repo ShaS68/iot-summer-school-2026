@@ -1,5 +1,6 @@
 # iot-summer-school-2026
 
-## Development Branch
+Sensor module code will be developed here.
 
-Development branch for testing Arduino programs.# iot-summer-school-2026
+
+
