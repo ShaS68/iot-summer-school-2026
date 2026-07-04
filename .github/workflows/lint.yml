@@ -1,0 +1,19 @@
+name: Count Arduino Lines
+
+on:
+  push:
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count Arduino Lines
+        run: |
+          echo "Arduino Files:"
+          find . -name "*.ino"
+          echo ""
+          echo "Line Count:"
+          find . -name "*.ino" | xargs wc -l
