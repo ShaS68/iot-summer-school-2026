@@ -1,6 +1,4 @@
 # iot-summer-school-2026
 
-Sensor module code will be developed here.
-
-
+Wireless communication code will be developed here.
 
