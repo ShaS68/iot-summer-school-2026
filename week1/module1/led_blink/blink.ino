@@ -5,7 +5,8 @@ Roll No : 68
 Description :
 Basic LED Blink
 */
-
+int potValue;
+int blinkDelay;
 void setup()
 {
   pinMode(13, OUTPUT);
@@ -14,12 +15,16 @@ void setup()
 
 void loop()
 {
-  digitalWrite(13, HIGH);
-  Serial.println("LED ON");
-  delay(500);
+  potValue = analogRead(A0);
 
-  digitalWrite(13, LOW);
+  blinkDelay = map(potValue,0,1023,100,1000);
+
+  digitalWrite(13,HIGH);
+  Serial.println("LED ON");
+  delay(blinkDelay);
+
+  digitalWrite(13,LOW);
   Serial.println("LED OFF");
-  delay(500);
+  delay(blinkDelay);
 }
 
